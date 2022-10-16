@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>cat(1) - Linux Manual Page</title>
+  <link rel="stylesheet" href="index.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <div id="main-container">
+    <div id="banner">
+      <h1 id="banner-title">Linux/UNIX Course Details</h1>
+      <form>
+        <input type="text" placeholder="search manual pages" name="search">
+        <button id="search" type="submit"><img src="assets/search.svg" alt="search button"></button>
+      </form>
+    </div>
+    <div id="nav-menu">
+      <h1 id="page-title">cat(1) - Linux Manual Page</h1>
+      <nav id="expanded">
+        <div class="menu-item">
+          <button id="overview" class="dropdown-button">Overview<img src="assets/caret-down.svg"
+              alt="expand overview dropdown"></button>
+          <div id="overview-content" class="dropdown-content">
+            <a href="#function" class="drop-link">Function</a>
+            <a href="#syntax" class="drop-link">Syntax</a>
+            <a href="#description" class="drop-link">Description</a>
+          </div>
+        </div>
+        <a href="#examples" class="menu-item">Examples</a>
+        <a href="#related" class="menu-item">Related</a>
+        <div class="menu-item">
+          <button id="about" class="dropdown-button">About<img src="assets/caret-down.svg"
+              alt="expand about dropdown"></button>
+          <div id="about-content" class="dropdown-content">
+            <a href="#author" class="drop-link">Author</a>
+            <a href="#reporting-bugs" class="drop-link">Reporting Bugs</a>
+            <a href="#copyright" class="drop-link">Copyright</a>
+            <a href="#colophon" class="drop-link">Colophon</a>
+          </div>
+        </div>
+      </nav>
+
+      <img src="assets/menu.svg" alt="hamburger menu" id="hamburger">
+      <div class="hamburger-content" id="hamburger-content">
+        <div class="menu-item">
+          <button id="overview" class="dropdown-button">Overview<img src="assets/caret-down.svg"
+              alt="expand overview dropdown"></button>
+          <div id="overview-content" class="dropdown-content">
+            <a href="#function" class="drop-link">Function</a>
+            <a href="#syntax" class="drop-link">Syntax</a>
+            <a href="#description" class="drop-link">Description</a>
+          </div>
+        </div>
+        <a href="#examples" class="menu-item">Examples</a>
+        <a href="#related" class="menu-item">Related</a>
+        <div class="menu-item">
+          <button id="about" class="dropdown-button">About<img src="assets/caret-down.svg"
+              alt="expand about dropdown"></button>
+          <div id="about-content" class="dropdown-content">
+            <a href="#author" class="drop-link">Author</a>
+            <a href="#reporting-bugs" class="drop-link">Reporting Bugs</a>
+            <a href="#copyright" class="drop-link">Copyright</a>
+            <a href="#colophon" class="drop-link">Colophon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="breadcrumb">
+        <a href="https://man7.org/index.html">Home</a>
+        <img src="assets/chevron-right.svg" alt="right chevron">
+        <p>Linux</p>
+        <img src="assets/chevron-right.svg" alt="right chevron">
+        <a href="https://man7.org/linux/man-pages/index.html">Manual Pages</a>
+        <img src="assets/chevron-right.svg" alt="right chevron">
+        <b>cat(1)</b>
+      </div>
+
+      <div id="function" class="section">
+        <div class="subtitle">
+          <h2>Function</h2>
+          <div class="line"></div>
+        </div>
+        <p>Concatenate files and print on the standard output.</p>
+        <br>
+        <p>View <a href="https://www.gnu.org/software/coreutils/cat">full documentation</a> or access locally via: info
+          '(coreutils) cat invocation'</p>
+      </div>
+
+      <div id="syntax" class="section">
+        <div class="subtitle">
+          <h2>Syntax</h2>
+          <div class="line"></div>
+        </div>
+        <div class="flat-text">
+          <p style="color:#A02820">cat</p>
+          <p class="black">&emsp;[OPTION]... [FILE]...</p>
+        </div>
+      </div>
+
+      <div id="description" class="section">
+        <div class="subtitle">
+          <h2>Description</h2>
+          <div class="line"></div>
+        </div>
+        <div class="section-text">
+          <p>Concatenate FILE(s) to standard output.</p>
+          <p>With no FILE, or when FILE is -, read standard input.</p>
+          <div class="flag">
+            <p style="color:#A02820">-A, --show-all</p>
+            <p class="flag-descr">equivalent to -vET</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-b, --number-nonblank</p>
+            <p class="flag-descr">number nonempty output lines, overrides -n</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-e</p>
+            <p class="flag-descr">equivalent to -vE</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-E, --show-ends</p>
+            <p class="flag-descr">display $ at end of each line</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-n, --number</p>
+            <p class="flag-descr">number all output lines</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-s, --squeeze-blank</p>
+            <p class="flag-descr">suppress repeated empty output lines</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-t</p>
+            <p class="flag-descr">equivalent to -vT</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-T, --show-tabs</p>
+            <p class="flag-descr">display TAB characters as ^I</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820">-u</p>
+            <p class="flag-descr">(ignored)</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820"> -v, --show-nonprinting</p>
+            <p class="flag-descr">use ^ and M- notation, except for LFD and TAB</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820"> --help</p>
+            <p class="flag-descr">display this help and exit</p>
+          </div>
+          <div class="flag">
+            <p style="color:#A02820"> --version</p>
+            <p class="flag-descr">output version information and exit</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="examples" class="section">
+        <div class="subtitle">
+          <h2>Examples</h2>
+          <div class="line"></div>
+        </div>
+        <div class="flag">
+          <p>cat f - g</p>
+          <p class="flag-descr">Output f's contents, then standard input, then g's contents.</p>
+        </div>
+        <div class="flag">
+          <p>cat</p>
+          <p class="flag-descr">Copy standard input to standard output.</p>
+        </div>
+      </div>
+
+      <div id="related" class="section">
+        <div class="subtitle">
+          <h2>Related</h2>
+          <div class="line"></div>
+        </div>
+        <p>See also: <a href="https://man7.org/linux/man-pages/man1/tac.1.html">tac(1)</a></p>
+        <br>
+        <p>Manual Pages that refer to this page:
+          <a href="https://man7.org/linux/man-pages/man1/groffer.1.html">groffer(1)</a>,
+          <a href="https://man7.org/linux/man-pages/man1/pmlogrewrite.1.html">pmlogrewrite(1)</a>,
+          <a href="https://man7.org/linux/man-pages/man1/pv.1.html">pv(1)</a>,
+          <a href="https://man7.org/linux/man-pages/man1/systemd-socket-activate.1.html">systemd-socket-activate(1)</a>,
+          <a href="https://man7.org/linux/man-pages/man1/ul.1.html">ul(1)</a>,
+          <a href="https://man7.org/linux/man-pages/man5/proc.5.html">proc(5)</a>,
+          <a href="https://man7.org/linux/man-pages/man7/cpuset.7.html">cupset(7)</a>,
+          <a href="https://man7.org/linux/man-pages/man7/time_namespaces.7.html">time_namespaces(7)</a>,
+          <a href="https://man7.org/linux/man-pages/man8/readprofile.8.html">readprofile(8)</a>
+        </p>
+      </div>
+
+      <div id="author" class="section">
+        <div class="subtitle">
+          <h2>Author</h2>
+          <div class="line"></div>
+        </div>
+        <p>Written by Torbjorn Granlund and Richard M. Stallman.</p>
+      </div>
+
+      <div id="reporting-bugs" class="section">
+        <div class="subtitle">
+          <h2>Reporting Bugs</h2>
+          <div class="line"></div>
+        </div>
+        <p>If you have a bug to report about this manual page or want more GNU coreutils online help, click <a
+            href="https://www.gnu.org/software/coreutils/"> here</a>.</p>
+        <br>
+        <p>Report any translation bugs <a href="https://translationproject.org/team/"> here</a>.</p>
+      </div>
+
+      <div id="copyright" class="section">
+        <div class="subtitle">
+          <h2>Copyright</h2>
+          <div class="line"></div>
+        </div>
+        <p>Copyright © 2020 Free Software Foundation, Inc. <a href="https://gnu.org/licenses/gpl.html">License
+            GPLv3+</a> for GNU GPL version 3 or later.
+          This is free software: you are free to change and redistribute it. There is <b>NO WARRANTY</b>, to the extent
+          permitted by law.</p>
+      </div>
+
+      <div id="colophon" class="section">
+        <div class="subtitle">
+          <h2>Colophon</h2>
+          <div class="line"></div>
+        </div>
+        <p>This page is part of the <a href="http://www.gnu.org/software/coreutils/">coreutils</a> (basic file, shell
+          and text
+          manipulation utilities) project. This page was obtained
+          from the <a href="http://ftp.gnu.org/gnu/coreutils/">tarball coreutils-8.32.tar.xz on 2021-08-27</a>. If you
+          discover any rendering problems in this HTML version of the page,
+          or you believe there is a better or more up-to-date source for
+          the page, or you have corrections or improvements to the
+          information in this COLOPHON (which is <b>not</b> part of the original
+          manual page), send a mail to man-pages@man7.org</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        HTML rendering created 2021-08-27 by <a href="https://man7.org/mtk/index.html">Michael Kerrisk</a>, author of <a
+          href="https://man7.org/tlpi/">The Linux Programming Interface</a>, maintainer of the <a
+          href="https://www.kernel.org/doc/man-pages/">Linux man-pages project</a>.
+        <br><br>
+        For details of in-depth Linux/UNIX system programming training courses that I teach, look <a
+          href="https://man7.org/training/">here</a>.
+        <br><br>
+        Hosting by <a href="https://www.jambit.com/index_en.html">jambit GmbH</a>.
+      </p>
+      <img src="assets/textbook.png" alt="The Linux Programming Interface Textbook">
+    </footer>
+
+  </div>
+</body>
+
+</html>

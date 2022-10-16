@@ -1,0 +1,278 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+input {
+    height: 1.6rem;
+} 
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+#banner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: #639879;
+    padding: 0.75rem 2.5rem;
+}
+
+#banner-title {
+    color: #ffffff;
+    font-size: 1.75rem;
+}
+
+#main-container {
+    margin: 1rem 3.5rem 0 3.5rem;
+}
+
+/* to make the nav sticky:
+https://gomakethings.com/how-to-create-a-sticky-navigation-with-only-css/ */
+#nav-menu {
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: sticky; 
+    top: 0;
+    border-bottom: 0.075rem solid #639879;
+    background-color: white;
+}
+
+#expanded {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    justify-content: space-between;
+    padding: 0.35rem 0 0 0;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.drop-link:hover {
+    text-decoration: underline;
+}
+
+#hamburger {
+    display: none;
+}
+
+.hamburger-content {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    font-size: 75%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+    position: absolute;
+    background-color: white;
+    white-space: nowrap;
+}
+
+.dropdown-button {
+    background-color: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+}
+
+.menu-item:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    margin: 0 1.75rem 0 0;
+}
+
+.main-content {
+    padding: 0.25rem 0.5rem;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: row;
+}
+
+h2 {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    white-space: nowrap;
+}
+
+.line {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    margin: 1.18rem 0;
+    background-color: #639879;
+}
+
+.section {
+    margin: 1rem 0;
+}
+
+/* https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+.section::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -75px;
+    visibility: hidden;
+}
+
+.section p {
+    padding: 0 10rem 0 2rem;
+    font-family: 'Segoe UI', 'Frutiger', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.section .flat-text p {
+    padding-right: 0;
+}
+
+.section .flat-text .black{
+    padding-left: 0;
+}
+
+.flat-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.flag {
+    padding: 0.5rem 0;
+}
+
+.flag .flag-descr {
+    padding-left: 4rem;
+}
+
+footer {
+    background-color: #EDEEEE;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: row;
+    font-weight: lighter;
+}
+
+footer img {
+    width: 7rem;
+    height: 9.25rem;
+    margin: 0 2rem;
+}
+
+@media all and (max-width: 850px) {
+    #main-container {
+        margin: 0;
+    }
+
+    #banner {
+        padding: 0.75rem 1rem;
+    }
+
+    html {
+        font-size: 19px;
+    }
+
+    .line {
+        margin: 1.19rem 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    .section p {
+        padding: 0 2rem;
+    }
+
+    #expanded {
+        display: none;
+    }
+
+    #hamburger {
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .hamburger-style {
+        display: flex;
+    }
+
+    .hamburger-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hamburger-content a {
+        color: inherit;
+        text-decoration: none;
+        font-size: larger;
+    }
+
+    .dropdown-content {
+        box-shadow: none;
+        position: relative;
+        font-size: 85%;
+    }
+
+    .dropdown-content a {
+        padding-left: 1rem;
+    }
+
+    .dropdown-button {
+        font-size: larger;
+    }
+
+    .menu-item {
+        margin: 0.5rem 0;
+    }
+
+    .collapse-style {
+        padding: 0.25rem;
+    }
+}
